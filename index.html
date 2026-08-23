@@ -51,11 +51,17 @@
             overflow-x: hidden;
         }
 
+        #navbar {
+            transition: background-color 0.25s ease, box-shadow 0.25s ease;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
         .glass-nav {
-            background-color: rgba(11, 11, 11, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            background-color: #0b0b0b;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
         }
 
         .orange-glow {
@@ -190,7 +196,7 @@
 <body class="font-sans flex flex-col min-h-screen">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 h-[84px] transition-all duration-300 flex items-center bg-transparent text-white">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 h-[84px] flex items-center bg-transparent text-white">
         <div class="max-w-[1360px] mx-auto px-4 md:px-[60px] w-full h-full grid grid-cols-[1fr_auto_1fr] items-center">
             <!-- Logo -->
             <a href="#home" class="justify-self-start flex items-center h-full cursor-pointer shrink-0 focus:outline-none" aria-label="Advrite Media School Home">
@@ -221,7 +227,7 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden absolute top-[80px] left-0 right-0 bg-[#0f0f0f] border-t border-white/5 p-6 flex-col gap-4 md:hidden">
+        <div id="mobile-menu" class="hidden absolute top-[84px] left-0 right-0 bg-[#0f0f0f] border-t border-white/5 p-6 flex-col gap-4 md:hidden">
             <a href="#home"    class="text-white text-base border-b border-white/5 pb-3">Home</a>
             <a href="#about"   class="text-white/70 font-semibold text-base border-b border-white/5 pb-3">About</a>
             <a href="#courses" class="text-white/70 font-medium text-base border-b border-white/5 pb-3">Courses</a>
