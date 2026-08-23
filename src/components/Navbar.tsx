@@ -36,10 +36,10 @@ const Navbar = () => {
              </svg>
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-3xl leading-none tracking-[0.2em] text-white">VIZ</span>
-            <span className="text-[9px] tracking-[0.4em] text-viz-primary font-semibold flex items-center justify-center gap-1 mt-1">
+            <span className="font-bold text-2xl leading-none tracking-wider text-white">ADVRITE</span>
+            <span className="text-[9px] tracking-[0.25em] text-viz-primary font-semibold flex items-center justify-center gap-1 mt-1">
               <span className="w-2 h-[1px] bg-viz-primary"></span>
-              ACADEMY
+              MEDIA SCHOOL
               <span className="w-2 h-[1px] bg-viz-primary"></span>
             </span>
           </div>

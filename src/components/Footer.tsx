@@ -13,8 +13,8 @@ const Footer = () => {
           <div className="flex items-center gap-2">
             <Triangle className="text-viz-primary w-8 h-8 fill-viz-primary rotate-180" />
             <div className="flex flex-col">
-              <span className="font-bold text-2xl leading-none tracking-widest text-white">VIZ</span>
-              <span className="text-[10px] tracking-[0.3em] text-viz-primary font-semibold">ACADEMY</span>
+              <span className="font-bold text-xl leading-none tracking-wider text-white">ADVRITE</span>
+              <span className="text-[10px] tracking-[0.2em] text-viz-primary font-semibold">MEDIA SCHOOL</span>
             </div>
           </div>
 
@@ -44,7 +44,7 @@ const Footer = () => {
         {/* Bottom Text */}
         <div className="text-center border-t border-white/10 pt-8">
           <p className="text-gray-500 text-xs">
-            © {currentYear} Viz Academy. All rights reserved.
+            © {currentYear} Advrite Media School. All rights reserved.
           </p>
         </div>
 

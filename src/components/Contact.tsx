@@ -22,8 +22,8 @@ const Contact = () => {
         {/* Email */}
         <div className="flex items-center gap-4 border-t border-white/10 pt-6 md:border-t-0 md:pt-0 lg:border-l lg:border-white/10 lg:pl-8">
           <Mail className="w-6 h-6 text-viz-primary shrink-0" />
-          <a href="mailto:hello@vizacademy.com" className="text-white font-medium hover:text-viz-primary transition-colors truncate">
-            hello@vizacademy.com
+          <a href="mailto:hello.advriteschool@gmail.com" className="text-white font-medium hover:text-viz-primary transition-colors truncate">
+            hello.advriteschool@gmail.com
           </a>
         </div>
 

@@ -38,7 +38,7 @@ const About = () => {
             empowers <span className="text-viz-primary">creators.</span>
           </h2>
           <p className="text-viz-gray text-lg max-w-md leading-relaxed">
-            At Viz Academy, we believe creativity can shape the future. 
+            At Advrite Media School, we believe creativity can shape the future. 
             Our mission is to provide world-class education that empowers anyone to learn, create, and grow.
           </p>
         </div>

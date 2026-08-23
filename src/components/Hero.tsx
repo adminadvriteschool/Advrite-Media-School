@@ -24,7 +24,7 @@ const Hero = () => {
             <a href="#courses" className="bg-viz-primary text-white px-8 py-4 rounded-xl font-semibold text-base transition-all duration-300 hover:scale-[1.03] hover:bg-viz-primary-hover w-full sm:w-auto text-center inline-block">
               Explore Courses
             </a>
-            <a href="https://wa.me/918590008225?text=Hi%20Klaiva%20Academy%2C%20I%27d%20like%20to%20book%20a%20free%20demo%20class.%20Please%20share%20the%20available%20time%20slots." target="_blank" className="bg-transparent border border-viz-primary text-viz-primary px-8 py-4 rounded-xl font-semibold text-base transition-all duration-300 hover:bg-white/5 flex items-center justify-center gap-2 w-full sm:w-auto">
+            <a href="https://wa.me/918590008225?text=Hi%20Advrite%20Media%20School%2C%20I%27d%20like%20to%20book%20a%20free%20demo%20class.%20Please%20share%20the%20available%20time%20slots." target="_blank" className="bg-transparent border border-viz-primary text-viz-primary px-8 py-4 rounded-xl font-semibold text-base transition-all duration-300 hover:bg-white/5 flex items-center justify-center gap-2 w-full sm:w-auto">
               <Calendar className="w-5 h-5" />
               Book a Free Demo
             </a>
