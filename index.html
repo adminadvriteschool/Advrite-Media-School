@@ -51,17 +51,29 @@
             overflow-x: hidden;
         }
 
-        #navbar {
-            transition: background-color 0.25s ease, box-shadow 0.25s ease;
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
+        header#navbar,
+        #navbar,
+        .glass-nav {
+            background-color: #0b0b0b !important;
+            box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            filter: none !important;
+            -webkit-filter: none !important;
+            border: none !important;
+            border-bottom: 0 !important;
+            outline: none !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
         }
 
-        .glass-nav {
-            background-color: #0b0b0b;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
+        #navbar::after,
+        #navbar::before,
+        .glass-nav::after,
+        .glass-nav::before {
+            display: none !important;
+            content: none !important;
+            box-shadow: none !important;
+            border: none !important;
         }
 
         .orange-glow {
@@ -197,10 +209,10 @@
 
     <!-- Navbar -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 h-[84px] flex items-center bg-transparent text-white">
-        <div class="max-w-[1360px] mx-auto px-4 md:px-[60px] w-full h-full grid grid-cols-[1fr_auto_1fr] items-center">
+        <div class="w-full max-w-[1560px] mx-auto px-6 md:px-10 lg:px-12 xl:px-16 h-full grid grid-cols-[1fr_auto_1fr] items-center">
             <!-- Logo -->
-            <a href="#home" class="justify-self-start flex items-center h-full cursor-pointer shrink-0 focus:outline-none" aria-label="Advrite Media School Home">
-                <img src="./src/assets/logo.png" alt="Advrite Media School" class="h-[72px] md:h-[84px] w-auto object-contain" height="84" />
+            <a href="#home" class="justify-self-start flex items-center h-full cursor-pointer shrink-0 focus:outline-none p-0 m-0 -translate-x-[15%]" aria-label="Advrite Media School Home">
+                <img src="./src/assets/logo.png" alt="Advrite Media School" class="h-[72px] md:h-[84px] w-auto object-contain object-left block" height="84" />
             </a>
 
             <!-- Desktop Nav -->
@@ -245,22 +257,20 @@
             <!-- Background layer -->
             <div class="absolute inset-0 pointer-events-none"></div>
 
-            <div class="relative z-10 max-w-[1360px] mx-auto px-4 md:px-[60px] w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[70px] items-center min-h-screen pt-[40px]">
+            <div class="relative z-10 w-full max-w-[1560px] mx-auto px-6 md:px-10 lg:px-12 xl:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center min-h-screen pt-[70px] pb-[40px]">
 
                 <!-- ── LEFT CONTENT ── -->
-                <div class="flex flex-col justify-center py-10 lg:py-0 max-w-[520px] w-full text-left pl-[25px] sm:pl-[28px]">
-
-
+                <div class="flex flex-col justify-center py-8 lg:py-0 max-w-[620px] w-full text-left">
 
                     <!-- Headline -->
-                    <h1 class="animate-fade-up delay-100 uppercase leading-[1.05] text-white mb-6 text-[68px] md:text-[80px] lg:text-[88px] font-display font-extrabold text-left flex flex-col">
-                        <span class="text-[1.2em] leading-[0.9]">MASTER</span>
+                    <h1 class="animate-fade-up delay-100 uppercase leading-[1.05] text-white mb-6 text-[61px] md:text-[72px] lg:text-[79px] xl:text-[85px] font-display font-extrabold text-left flex flex-col">
+                        <span class="text-[1.18em] leading-[0.9]">MASTER</span>
                         <span class="mt-1" style="color: #00CCCC; filter: drop-shadow(0 0 28px rgba(0,204,204,0.45));">CREATIVE</span>
                         <span style="color: #00CCCC; filter: drop-shadow(0 0 28px rgba(0,204,204,0.45));">SKILLS.</span>
                     </h1>
 
                     <!-- Description -->
-                    <p class="animate-fade-up delay-200 text-[#B8B8B8] text-[16px] md:text-[18px] leading-[1.6] max-w-[460px] mb-8 text-left">
+                    <p class="animate-fade-up delay-200 text-[#B8B8B8] text-[16px] md:text-[18px] lg:text-[19px] leading-[1.65] max-w-[500px] mb-8 text-left">
                         Learn Graphic Design, Video Editing, Motion Graphics, and AI through live one-to-one expert mentorship.
                     </p>
 
@@ -279,46 +289,52 @@
 
                     <!-- Social proof strip -->
                     <div class="animate-fade-up delay-400 w-10 h-[2px] bg-white/10 mt-[40px] mb-5 rounded-full"></div>
-                    <div class="animate-fade-up delay-400 flex items-center gap-2.5 flex-wrap">
-                        <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00CCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                    <div class="animate-fade-up delay-400 flex items-center gap-2 sm:gap-2.5 lg:gap-3 flex-wrap md:flex-nowrap">
+                        <!-- Item 1: Live One-to-One Classes -->
+                        <div class="flex items-center gap-2 shrink-0">
+                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00CCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                            </div>
+                            <p class="text-white/40 text-[13px] whitespace-nowrap"><span class="text-white/80 font-semibold">Live</span> One-to-One Classes</p>
                         </div>
-                        <p class="text-white/40 text-[13px]"><span class="text-white/80 font-semibold">Live</span> One-to-One Classes</p>
                         
-                        <span class="text-white/20 text-xs mx-1 hidden sm:inline-block">•</span>
+                        <span class="text-white/20 text-xs hidden sm:inline-block select-none">•</span>
                         
-                        <div class="flex items-center gap-1.5 text-white/40 text-[13px]">
+                        <!-- Item 2: 4.9 Rating -->
+                        <div class="flex items-center gap-1.5 shrink-0 text-white/40 text-[13px]">
                             <div class="flex items-center gap-1 text-white/80 font-semibold">
                                 <span>4.9</span>
                                 <svg class="w-3.5 h-3.5 fill-current mb-[1px] text-[#00CCCC]" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                             </div>
-                            <span>Rating</span>
+                            <span class="whitespace-nowrap">Rating</span>
                         </div>
 
-                        <span class="text-white/20 text-xs mx-1 hidden sm:inline-block">•</span>
+                        <span class="text-white/20 text-xs hidden sm:inline-block select-none">•</span>
 
-                        <div class="flex items-center gap-2.5">
+                        <!-- Item 3: Certificate Included -->
+                        <div class="flex items-center gap-2 shrink-0">
                             <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00CCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
                             </div>
-                            <p class="text-white/40 text-[13px]"><span class="text-white/80 font-semibold">Certificate</span> Included</p>
+                            <p class="text-white/40 text-[13px] whitespace-nowrap"><span class="text-white/80 font-semibold">Certificate</span> Included</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- ── RIGHT IMAGE: Cinematic Borderless Composition ── -->
-                <div class="animate-fade-up delay-200 relative flex items-center justify-center min-h-[300px] sm:min-h-[400px] lg:min-h-[600px]">
+                <!-- ── RIGHT IMAGE: Cinematic Borderless Composition with Badges ── -->
+                <div class="animate-fade-up delay-200 relative flex items-center justify-center min-h-[360px] sm:min-h-[440px] lg:min-h-[560px] xl:min-h-[620px] w-full">
 
-                    <!-- ░ Layer 3: The image - seamlessly blended and floating ░ -->
-                    <div class="relative w-full z-10 p-4 -ml-4 lg:-ml-12 animate-float">
-                        <div class="relative w-full group scale-110" style="filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));">
-                            <img src="./src/assets/workspace_editor.png" alt="Creative Workspace"
+
+
+
+
+                    <!-- Main Image Composition -->
+                    <div class="relative w-full max-w-[620px] lg:max-w-none z-10 p-2 sm:p-4 animate-float">
+                        <div class="relative w-full group scale-105 lg:scale-110" style="filter: drop-shadow(0 25px 50px rgba(0,0,0,0.7));">
+                            <img src="./src/assets/workspace_editor.png" alt="Creative Workspace and Student Learning"
                                  class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.03] contrast-[1.10]" />
                         </div>
-
-
                     </div>
-
 
                 </div>
             </div>
@@ -331,9 +347,9 @@
             <div class="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] pointer-events-none" 
                  style="background: radial-gradient(circle at center, rgba(255,90,31,0.04) 0%, transparent 70%);"></div>
 
-            <div class="max-w-[1200px] mx-auto px-4 sm:px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[110px] items-center relative z-10">
+            <div class="max-w-[1560px] mx-auto px-6 md:px-10 lg:px-12 xl:px-16 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center relative z-10">
                 <!-- Left Column -->
-                <div class="animate-fade-up" style="max-width: 700px; width: 100%;">
+                <div class="animate-fade-up" style="max-width: 640px; width: 100%;">
                     <p class="uppercase" style="color: #00CCCC; font-size: 14px; font-weight: 700; letter-spacing: 0.25em; margin-bottom: 24px; line-height: 1;">ABOUT US</p>
                     <h2 class="leading-[1.08] font-display font-semibold" style="color: #111111; font-size: clamp(36px, 5.5vw, 68px); letter-spacing: -0.03em; margin-bottom: 0; max-width: 540px;">
                         From Passion <br />
@@ -401,25 +417,12 @@
                     </div>
 
                 </div>
-
-                </div>
-                    </div>
-
-                </div>
-                    </div>
-
-                </div>
-
-                </div>
-                    </div>
-
-                </div>
             </div>
         </section>
 
         <!-- Courses Section -->
         <section id="courses" class="py-section bg-viz-bg">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 w-full">
+            <div class="max-w-[1560px] mx-auto px-6 md:px-10 lg:px-12 xl:px-16 w-full">
                 <!-- Header -->
                 <div class="text-center mb-16 animate-fade-up">
                     <h2 class="text-[42px] md:text-[56px] leading-[1.15] mb-4 text-[#111111] font-display font-semibold tracking-tight">
@@ -431,7 +434,7 @@
                 </div>
 
                 <!-- Course Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10 mb-16">
                     <!-- Course 1 -->
                     <div class="bg-white rounded-[16px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] group animate-fade-up delay-100">
                         <div class="h-48 overflow-hidden relative">
@@ -523,7 +526,7 @@
         <!-- Contact Section -->
         <section id="contact" class="relative overflow-hidden bg-[#FAFAFA] py-16 md:py-[130px]">
 
-            <div class="mx-auto px-5 md:px-6 w-full relative z-10 max-w-full md:max-w-[1400px]">
+            <div class="mx-auto px-6 md:px-10 lg:px-12 xl:px-16 w-full relative z-10 max-w-[1560px]">
 
                 <!-- Ambient glow for heading -->
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg md:max-w-[600px] aspect-video pointer-events-none" style="background: radial-gradient(circle at center, rgba(0,204,204,0.04) 0%, transparent 70%);"></div>
@@ -620,7 +623,7 @@
                         </div>
                         <div class="min-w-0 flex-1">
                             <p class="text-[10px] lg:text-[11px] tracking-[2px] uppercase text-white/45 font-semibold mb-0.5 leading-tight">Phone</p>
-                            <p class="text-[14px] lg:text-[16px] font-semibold text-white leading-tight break-words">+91 85900 08225, +91 70120 08225</p>
+                            <p class="text-[14px] lg:text-[16px] font-semibold text-white leading-tight break-words">+91 85900 08225&nbsp;&nbsp;|&nbsp;&nbsp;+91 70120 08225</p>
                         </div>
                     </a>
 
@@ -643,7 +646,7 @@
 
     <!-- Footer -->
     <footer class="bg-[#111111] pt-16 pb-8 relative z-10 w-full">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="max-w-[1560px] mx-auto px-6 md:px-10 lg:px-12 xl:px-16">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
                 <!-- Logo -->
                 <a href="index.html" class="inline-block">
