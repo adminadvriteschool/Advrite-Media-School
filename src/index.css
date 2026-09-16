@@ -26,7 +26,11 @@
   }
   
   .glass-nav {
-    @apply bg-white/80 backdrop-blur-md border-b border-gray-200;
+    background-color: #0f0f0f !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-bottom: none !important;
+    backdrop-filter: none !important;
   }
 }
 

@@ -13,7 +13,7 @@ function App() {
         <Hero />
         <About />
         <Courses />
-        <div className="max-w-[1280px] mx-auto px-6 w-full -mt-16 mb-24 relative z-20">
+        <div className="max-w-[1560px] mx-auto px-6 md:px-10 lg:px-12 xl:px-16 w-full -mt-16 mb-24 relative z-20">
           <Contact />
         </div>
       </main>

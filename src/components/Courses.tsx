@@ -33,7 +33,7 @@ const Courses = () => {
 
   return (
     <section id="courses" className="py-section bg-viz-bg">
-      <div className="max-w-[1280px] mx-auto px-6 w-full">
+      <div className="max-w-[1560px] mx-auto px-6 md:px-10 lg:px-12 xl:px-16 w-full">
         
         {/* Header */}
         <div className="text-center mb-16 animate-fade-up">

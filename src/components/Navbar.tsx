@@ -14,10 +14,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', active: true },
-    { name: 'About', active: false },
-    { name: 'Course', active: false },
-    { name: 'Contact', active: false },
+    { name: 'Home', href: '#home', active: true },
+    { name: 'About', href: '#about', active: false },
+    { name: 'Course', href: '#course', active: false },
+    { name: 'Contact', href: '#contact', active: false },
+    { name: 'Advrite', href: 'https://advrite.com/', active: false, external: true },
   ];
 
   return (
@@ -26,10 +27,10 @@ const Navbar = () => {
         scrolled ? 'glass-nav text-white' : 'bg-transparent text-white'
       }`}
     >
-      <div className="max-w-[1280px] mx-auto px-6 w-full flex justify-between items-center">
+      <div className="w-full max-w-[1560px] mx-auto px-6 md:px-10 lg:px-12 xl:px-16 h-full grid grid-cols-[1fr_auto_1fr] items-center">
         
         {/* Logo */}
-        <div className="flex items-center gap-3 cursor-pointer">
+        <div className="justify-self-start flex items-center gap-3 cursor-pointer -translate-x-[15%]">
           <div className="flex flex-col gap-[2px]">
              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 2L20 8L8 11L22 17L10 20L14 24" stroke="#00CCCC" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
@@ -46,13 +47,15 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex justify-self-center items-center gap-8">
           {navLinks.map((link) => (
             <a 
               key={link.name} 
-              href={`#${link.name.toLowerCase()}`}
+              href={link.href}
+              target={link.external ? '_blank' : undefined}
+              rel={link.external ? 'noopener noreferrer' : undefined}
               className={`text-sm font-medium transition-colors hover:text-viz-primary relative group ${
-                link.active ? 'text-white' : 'text-gray-300'
+                link.external ? 'text-viz-primary font-semibold' : link.active ? 'text-white' : 'text-gray-300'
               }`}
             >
               {link.name}
@@ -64,14 +67,14 @@ const Navbar = () => {
         </div>
 
         {/* CTA */}
-        <div className="hidden md:block">
+        <div className="hidden md:block justify-self-end">
           <button className="bg-viz-primary text-white px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-[1.03] hover:box-glow">
             Get Started
           </button>
         </div>
 
         {/* Mobile Toggle */}
-        <div className="md:hidden">
+        <div className="md:hidden justify-self-end col-start-3">
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-white">
             {mobileMenuOpen ? <X /> : <Menu />}
           </button>
@@ -84,11 +87,13 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <a 
               key={link.name} 
-              href={`#${link.name.toLowerCase()}`}
-              className="text-white font-medium text-lg border-b border-white/10 pb-2"
+              href={link.href}
+              target={link.external ? '_blank' : undefined}
+              rel={link.external ? 'noopener noreferrer' : undefined}
+              className={`font-medium text-lg border-b border-white/10 pb-2 ${link.external ? 'text-viz-primary font-semibold' : 'text-white'}`}
               onClick={() => setMobileMenuOpen(false)}
             >
-              {link.name}
+              {link.name} {link.external ? '(Parent Brand)' : ''}
             </a>
           ))}
           <button className="bg-viz-primary text-white px-6 py-3 rounded-xl font-semibold mt-4">

@@ -26,7 +26,7 @@ const About = () => {
 
   return (
     <section id="about" className="py-section bg-white">
-      <div className="max-w-[1280px] mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-[1560px] mx-auto px-6 md:px-10 lg:px-12 xl:px-16 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center">
         
         {/* Left Column */}
         <div className="animate-fade-up">
